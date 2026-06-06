@@ -63,7 +63,7 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-          <Link href="/#lead" className="btn btn-gold" style={{ color: "#231d11" }}>
+          <Link href="/quote" className="btn btn-gold" style={{ color: "#231d11" }}>
             Free Quote <span className="arrow">→</span>
           </Link>
         </nav>
@@ -110,7 +110,7 @@ export default function Header() {
             </Link>
           ))}
           <div style={{ padding: "16px 28px 0" }}>
-            <Link href="/#lead" onClick={() => setOpen(false)} className="btn btn-gold" style={{ color: "#231d11", justifyContent: "center", width: "100%" }}>
+            <Link href="/quote" onClick={() => setOpen(false)} className="btn btn-gold" style={{ color: "#231d11", justifyContent: "center", width: "100%" }}>
               Free Quote →
             </Link>
           </div>

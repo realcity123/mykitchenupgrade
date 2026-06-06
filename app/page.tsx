@@ -52,7 +52,7 @@ export default function HomePage() {
               Custom design and full builds for homeowners across Toronto, Mississauga, Brampton &amp; the GTA. Real ideas, honest quotes, results you&apos;ll love.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "26px", flexWrap: "wrap" }}>
-              <a href="#lead" className="btn btn-ink">Get My Free Quote <span className="arrow">→</span></a>
+              <a href="/quote" className="btn btn-ink">Get My Free Quote <span className="arrow">→</span></a>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <span className="stars" style={{ fontSize: "1.05rem" }}>★★★★★</span>
                 <small style={{ color: "var(--muted)", fontSize: ".86rem", lineHeight: 1.3 }}>
@@ -123,7 +123,7 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <a href="#lead" className="btn btn-gold">Book My Free Consultation <span className="arrow">→</span></a>
+          <a href="/quote" className="btn btn-gold">Book My Free Consultation <span className="arrow">→</span></a>
         </div>
       </section>
 
@@ -231,7 +231,7 @@ export default function HomePage() {
           <div style={{ textAlign: "center", marginTop: "72px" }}>
             <h2 style={{ marginBottom: "10px" }}>Ready to start your upgrade?</h2>
             <p style={{ color: "var(--muted)", marginBottom: "26px" }}>It takes 30 seconds. Real ideas for your dream kitchen are one form away.</p>
-            <a href="#lead" className="btn btn-ink">Start My Free Quote <span className="arrow">→</span></a>
+            <a href="/quote" className="btn btn-ink">Start My Free Quote <span className="arrow">→</span></a>
           </div>
         </div>
       </section>

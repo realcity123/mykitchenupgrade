@@ -24,6 +24,34 @@ create policy "Service role full access" on leads
   using (auth.role() = 'service_role')
   with check (auth.role() = 'service_role');
 
+-- ── QUOTES ─────────────────────────────────────────────────────────────────
+create table if not exists quotes (
+  id             uuid primary key default gen_random_uuid(),
+  created_at     timestamptz default now(),
+  project_type   text not null,   -- Full Renovation | Cabinets Only | Countertops Only | Design Consult
+  kitchen_size   text,            -- Small (<100 sqft) | Medium (100–150) | Large (150–200) | Open Concept (200+)
+  kitchen_layout text,            -- Galley | L-Shape | U-Shape | Island | Peninsula | Open Plan
+  finish_level   text,            -- Standard | Premium | Luxury
+  timeline       text,            -- ASAP | 1–3 months | 3–6 months | 6–12 months
+  budget_range   text,            -- Under $15k | $15k–$30k | $30k–$60k | $60k–$100k | $100k+
+  name           text not null,
+  phone          text not null,
+  email          text not null,
+  city           text not null,
+  estimate_low   integer,
+  estimate_high  integer,
+  status         text default 'new',
+  notes          text
+);
+
+create index if not exists quotes_status_idx     on quotes (status);
+create index if not exists quotes_created_at_idx on quotes (created_at desc);
+
+alter table quotes enable row level security;
+create policy "Service role full access on quotes" on quotes
+  using (auth.role() = 'service_role')
+  with check (auth.role() = 'service_role');
+
 -- ── BLOG POSTS ─────────────────────────────────────────────────────────────
 create table if not exists blog_posts (
   id               uuid primary key default gen_random_uuid(),

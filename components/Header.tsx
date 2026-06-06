@@ -12,9 +12,23 @@ export default function Header() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Home page — empty space, no nav
+  // Home page — logo left, phone right, no nav
   if (path === "/") {
-    return <div style={{ height: "74px", background: "var(--paper)", borderBottom: "1px solid var(--line)" }} />;
+    return (
+      <header style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}>
+        <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "74px", gap: "20px" }}>
+          <span className="brandmark">
+            <span className="bm-rule" />
+            <span className="bm-word">My<span className="k">Kitchen</span>Upgrade<span className="tld">.CA</span></span>
+            <span className="bm-tag">Bespoke Kitchen Design · GTA</span>
+          </span>
+          <a
+            href="tel:+19055550199"
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", fontWeight: 600, color: "var(--ink)", letterSpacing: ".01em", whiteSpace: "nowrap" }}
+          >(905) 555-0199</a>
+        </div>
+      </header>
+    );
   }
 
   return (

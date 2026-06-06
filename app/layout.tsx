@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   description:
     "Custom kitchen design and renovation across Toronto, Mississauga, Brampton & the GTA. Free consultations, honest quotes, 10-year workmanship warranty.",
   metadataBase: new URL("https://www.mykitchenupgrade.ca"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+  },
   openGraph: {
     siteName: "MyKitchenUpgrade.ca",
     type: "website",

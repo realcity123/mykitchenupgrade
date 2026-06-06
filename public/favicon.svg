@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" shape-rendering="geometricPrecision">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#211d18"/>
+      <stop offset="100%" stop-color="#16130f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dcbd80"/>
+      <stop offset="55%" stop-color="#c2974a"/>
+      <stop offset="100%" stop-color="#a67c30"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="10" fill="url(#bg)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="8.5" fill="none" stroke="rgba(194,151,74,0.22)" stroke-width="1"/>
+
+  <!-- Stylised "K" — elegant serif proportions -->
+  <!-- Vertical stem -->
+  <rect x="17" y="13" width="6" height="38" rx="1.5" fill="url(#gold)"/>
+
+  <!-- Upper diagonal arm (top-right) -->
+  <polygon points="23,13 30,13 45,32 38,32" fill="url(#gold)" opacity="0.95"/>
+
+  <!-- Lower diagonal leg (bottom-right) -->
+  <polygon points="38,32 45,32 30,51 23,51" fill="url(#gold)" opacity="0.95"/>
+
+  <!-- Thin gold rule at bottom — brand detail -->
+  <rect x="17" y="54" width="30" height="1.5" rx="0.75" fill="url(#gold)" opacity="0.5"/>
+</svg>

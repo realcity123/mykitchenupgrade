@@ -74,6 +74,11 @@ export default function HomePage() {
                 alt="Luxury cream and gold kitchen with marble backsplash"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
+              {/* Top fade */}
+              <div style={{
+                position: "absolute", inset: 0, pointerEvents: "none",
+                background: "linear-gradient(to bottom, var(--cream) 0%, transparent 22%, transparent 76%, var(--cream) 100%)",
+              }} />
             </div>
             <div style={{
               position: "absolute", right: "26px", bottom: "36px",

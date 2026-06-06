@@ -12,6 +12,11 @@ export default function Header() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
 
+  // Home page — empty space, no nav
+  if (path === "/") {
+    return <div style={{ height: "74px", background: "var(--paper)", borderBottom: "1px solid var(--line)" }} />;
+  }
+
   return (
     <header style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}>
       <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "74px", gap: "20px" }}>
@@ -44,11 +49,7 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-          <Link
-            href="/#lead"
-            className="btn btn-gold"
-            style={{ color: "#231d11" }}
-          >
+          <Link href="/#lead" className="btn btn-gold" style={{ color: "#231d11" }}>
             Free Quote <span className="arrow">→</span>
           </Link>
         </nav>

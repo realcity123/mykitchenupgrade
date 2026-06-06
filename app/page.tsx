@@ -70,7 +70,7 @@ export default function HomePage() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80"
+                src="/kitchen-hero.jpg"
                 alt="Luxury cream and gold kitchen with marble backsplash"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />

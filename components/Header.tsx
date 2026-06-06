@@ -17,14 +17,14 @@ export default function Header() {
     return (
       <header style={{ background: "var(--paper)", borderBottom: "1px solid var(--line)" }}>
         <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "74px", gap: "20px" }}>
-          <span className="brandmark">
+          <span className="brandmark" style={{ flexShrink: 1, minWidth: 0 }}>
             <span className="bm-rule" />
             <span className="bm-word">My<span className="k">Kitchen</span>Upgrade<span className="tld">.CA</span></span>
-            <span className="bm-tag">Bespoke Kitchen Design · GTA</span>
+            <span className="bm-tag hidden sm:block">Bespoke Kitchen Design · GTA</span>
           </span>
           <a
             href="tel:+19055550199"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", fontWeight: 600, color: "var(--ink)", letterSpacing: ".01em", whiteSpace: "nowrap" }}
+            style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", fontWeight: 600, color: "var(--ink)", letterSpacing: ".01em", whiteSpace: "nowrap", flexShrink: 0 }}
           >(905) 555-0199</a>
         </div>
       </header>
